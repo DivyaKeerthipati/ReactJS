@@ -18,6 +18,8 @@ class TaskManager extends Component {
     }
 
     addTask = (data) => {
+        this.props.history.push('/tasks/' + data.id)
+
         const { title, description } = data
 
         const newTask = new Task(

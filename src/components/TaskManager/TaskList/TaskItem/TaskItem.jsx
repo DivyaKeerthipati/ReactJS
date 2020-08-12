@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { ListGroupItem, Button } from 'reactstrap'
 
 const TaskItem = (props) => {
     const {task} = props
     return (
         <ListGroupItem>
-            {task.title}
+            <Link to={'/tasks/' + task.id }> {task.title} </Link>
             <Button close />
         </ListGroupItem>
         )
